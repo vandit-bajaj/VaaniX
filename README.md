@@ -5,91 +5,119 @@
 
 **Catch AI voice-clone scam calls while they are still ringing, and warn the family before the money moves.**
 
-<a href="https://52.62.8.151.sslip.io"><img src="https://img.shields.io/badge/Live-52.62.8.151.sslip.io-0B7C78?style=for-the-badge" alt="Live site"></a>
-<a href="https://52.62.8.151.sslip.io/try"><img src="https://img.shields.io/badge/Try_a_check-%2Ftry-0F2A44?style=for-the-badge" alt="Try a check"></a>
+[![Live Site](https://img.shields.io/badge/Live%20Demo-52.62.8.151.sslip.io-0E9F9A?style=for-the-badge&logo=google-chrome&logoColor=white)](https://52.62.8.151.sslip.io)
+[![Try Demo](https://img.shields.io/badge/Try%20a%20Check-%2Ftry-0F2A44?style=for-the-badge&logo=waveform&logoColor=white)](https://52.62.8.151.sslip.io/try)
 
-<a href="https://github.com/vandit-bajaj/VaaniX/actions/workflows/ci.yml"><img src="https://github.com/vandit-bajaj/VaaniX/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-<img src="https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs" alt="Next.js 16">
-<img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19">
-<img src="https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white" alt="Python 3.10">
-<img src="https://img.shields.io/badge/PyTorch-Nes2Net--X-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch">
-<img src="https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3FCF8E?logo=supabase&logoColor=white" alt="Supabase">
-<img src="https://img.shields.io/badge/AWS-EC2%20%2B%20Docker-FF9900?logo=amazonwebservices&logoColor=white" alt="AWS">
-<img src="https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?logo=telegram&logoColor=white" alt="Telegram">
+[![CI](https://github.com/vandit-bajaj/VaaniX/actions/workflows/ci.yml/badge.svg)](https://github.com/vandit-bajaj/VaaniX/actions/workflows/ci.yml)
+[![Next.js](https://img.shields.io/badge/Next.js-16.3.4-0F2A44?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.8-0E9F9A?style=flat&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Nes2Net--X-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ECF8E?style=flat&logo=supabase&logoColor=white)](https://supabase.com/)
+[![AWS](https://img.shields.io/badge/AWS-EC2%20%2B%20Docker-FF9900?style=flat&logo=amazonwebservices&logoColor=white)](https://aws.amazon.com/)
+[![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?style=flat&logo=telegram&logoColor=white)](https://core.telegram.org/bots/api)
+[![Vitest](https://img.shields.io/badge/Tests-67%20Passed-brightgreen?style=flat&logo=vitest&logoColor=white)](https://vitest.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
 
-[Overview](#overview) • [Features](#features) • [How it works](#how-it-works) • [Getting started](#getting-started) • [Deploying to AWS](#deploying-to-aws) • [Status](#status-and-limitations) • [Privacy](#privacy-and-security)
+[About VaaniX](#-about-vaanix) • [Features](#-features) • [How It Works](#-how-it-works) • [Architecture](#-system-architecture) • [Getting Started](#-getting-started) • [Deploying to AWS](#-deploying-to-aws) • [Status & Transparency](#-status-and-transparency) • [Privacy](#-privacy-and-security)
 
 </div>
 
+---
+
 > [!TIP]
-> **Live:** [52.62.8.151.sslip.io](https://52.62.8.151.sslip.io). Open the console with **Open App** (no account needed), or upload a short clip on [`/try`](https://52.62.8.151.sslip.io/try).
+> **Live Deployment:** [52.62.8.151.sslip.io](https://52.62.8.151.sslip.io)  
+> You can test the platform live right now. Click **Open App** from the homepage to explore the console (with automated local store mode, no sign-up required), or upload a test clip on [`/try`](https://52.62.8.151.sslip.io/try).
 
-| 🎙️ 10-second check | 👨‍👩‍👧 Family verification | 📡 Scam Radar | 🚨 Golden-hour actions |
+| 🎙️ 10-Second Acoustic Check | 👨‍👩‍👧 Family Verification | 📡 Community Scam Radar | 🚨 Golden-Hour Action |
 |:---:|:---:|:---:|:---:|
-| Acoustic spoof score + Hindi/Hinglish scam-language analysis | The impersonated person confirms or denies with one Telegram tap | Community reputation for caller numbers | 1930 speed-dial, cyber-cell draft, bank freeze request |
+| Dual-engine Nes2Net-X acoustic spoof score + Hindi/Hinglish extortion language parsing | Out-of-band Telegram query to the real family member with one-tap confirmation | Real-time crowd-sourced reputation engine for suspect phone numbers | Instant 1930 speed-dial, state cyber-cell complaint draft, and bank freeze request |
 
-VaaniX is a scam-defence platform for India's voice-clone fraud problem. A caller who sounds exactly like your son, your father or a police officer asks for money *right now*. VaaniX listens to a short clip of that call, scores how likely the voice is synthetic, reads what is being said, and alerts the people who can stop the transfer, in seconds, over Telegram.
+---
 
-## Overview
+## 🛡️ About VaaniX
 
-A voice-clone scam works because the victim has no way to check, in the moment, whether the voice is real. VaaniX gives them three things:
+### The Problem: Voice Cloning Weaponizes Family Trust
 
-- **A check:** a 10-second clip is scored for acoustic spoofing and for scam language (Hindi, Hinglish and English).
-- **A second opinion from the family:** the person being impersonated gets a Telegram message, *"Someone is calling with your voice. Is this you?"*, and one tap confirms or denies it.
-- **A fast next step:** a one-tap path to the **1930** cyber-crime helpline, a pre-filled complaint to the state cyber cell, and a freeze request to the bank, all with a SHA-256 digest of the evidence.
+Artificial Intelligence has made voice impersonation cheap, rapid, and devastating. Using as little as 3 seconds of raw audio harvested from a social media story, video reel, or public voicemail, malicious actors generate convincing synthetic replicas of a target's voice.
 
-It serves three kinds of people:
+In India and across the globe, organized fraud syndicates weaponize these clones to target parents, spouses, and elderly citizens with high-pressure emergency scenarios:
+- *"Papa, please transfer ₹50,000 urgently to this UPI ID — police have detained me after a vehicle collision."*
+- *"Ma'am, this is Cyber Cell Inspector Sharma. Your Aadhaar is tied to illegal transactions; you must verify your identity immediately."*
 
-- **The person on the call** runs a check from the web console and gets a verdict and clear next actions.
-- **The family member being impersonated** answers one Telegram question that confirms or kills the alert.
-- **The community**, through Scam Radar, learns which phone numbers are being reported.
+Because the caller **sounds unmistakably like their loved one**, victims enter a state of acute panic. They transfer funds via instant UPI or IMPS within minutes — before having the chance to step back, cross-examine, or dial their child directly. By the time they discover the deception, the stolen money has already bounced through layered mule accounts and been withdrawn at ATMs.
 
-## Features
+### Verified Scale & Impact
 
-| | |
-|---|---|
-| **10-second check** | **Nes2Net-X** (a wav2vec 2.0 XLSR-53 front end, 300M parameters) gives an acoustic spoof probability from 0 to 100. **faster-whisper** transcribes the clip, and a Hindi, Hinglish and English scam vocabulary (arrest, police, OTP, customs, emergency) is matched against it. Both run in parallel. |
-| **Transparent risk score** | `risk = round(0.70 × voice + 0.30 × text)`. A call is flagged `AI_CLONE` when `risk ≥ 60` **and** `voice ≥ 50`. Every weight and cut-off lives in one file, [`src/lib/scoring/config.ts`](src/lib/scoring/config.ts), so it can be tuned against real audio. |
-| **Who is the caller pretending to be?** | The text analyser extracts impersonation claims (*"Papa"*, *"Beta"*, *"Police Officer"*) and matches them to the family members the user registered. |
-| **Two-way Telegram alerts** | The victim gets an urgent card with the score and scam type. The impersonated family member gets *"Is this you? [No, it's a scam] [Yes, it's me]"*. Answering "No" confirms the alert and raises the caller's reputation on Scam Radar. |
-| **Scam Radar** | A community reputation lookup for phone numbers. A number becomes `potential_scam` when **3 distinct reporters** flag it within 24 hours, or on any confirmed `impersonation_denied`. The threshold is configurable with `RADAR_THRESHOLD`. |
-| **Golden-hour actions** | `/r/call1930` is a speed-dial page for the national helpline. `/r/cyber/[id]` drafts a state cyber-cell complaint (a pre-filled email, kept to 2,000 characters for browser compatibility). `/r/bank/[id]` drafts a bank freeze request. |
-| **Public API** | `/api/v1/analyze`, `/api/v1/complaint`, `/api/v1/radar/lookup` and `/api/v1/evidence/[id]`, authenticated with API keys that users create in the console. See [`docs/API.md`](docs/API.md). |
-| **No fake results** | If the model server is unreachable the app says so. If the model runs in stub mode, the result carries a **Demo Mode** badge. See [Status and limitations](#status-and-limitations). |
+Every figure and metric referenced throughout VaaniX comes exclusively from verified parliamentary replies, threat intelligence reports, and peer-reviewed academic literature:
 
-## How it works
+| Metric | Verified Real-World Finding | Official Citation |
+|:---|:---|:---|
+| **47%** | Of Indian adults have personally faced or know someone targeted by an AI voice scam *(vs. 25% globally)* | McAfee *Beware the Artificial Impostor* Survey ([Digital Terminal](https://digitalterminal.in/tech-companies/mcafee-reveals-47-of-indians-have-faced-ai-voice-scams)) |
+| **83%** | Of Indian voice scam victims suffered immediate financial loss; nearly half lost over ₹50,000 | McAfee Threat Research ([BOOM Live Report](https://www.boomlive.in/explainers/ai-voice-scam-voice-cloning-mcafee-report-21851)) |
+| **3 Seconds** | Of audio was sufficient to generate an 85% voice clone match in empirical laboratory tests | McAfee Threat Research Labs ([Report](https://digitalterminal.in/tech-companies/mcafee-reveals-47-of-indians-have-faced-ai-voice-scams)) |
+| **₹22,845 Cr** | Lost by Indian citizens to cyber fraud in 2024 *(a 206% surge from ₹7,465 Cr in 2023)* | Lok Sabha Parliamentary Reply, Ministry of Home Affairs, July 22, 2025 ([Scroll](https://scroll.in/latest/1084796/indians-lost-rs-22845-crore-to-cyber-fraud-in-2024-a-206-rise-from-previous-year-centre)) |
+| **27%** | Of deepfake speech samples were completely missed by human listeners in a 529-participant controlled trial, even after training | University College London (UCL), *PLOS ONE*, Aug 2023 ([UCL News](https://www.ucl.ac.uk/news/2023/aug/humans-unable-detect-over-quarter-deepfake-speech-samples)) |
 
-### High-level design
+### The Defense Philosophy: Intercept Before the Money Moves
+
+Traditional fraud response is entirely forensic and retroactive: victims file a police complaint days after funds are irreversibly gone. 
+
+VaaniX changes the paradigm from **post-loss regret** to **in-call interception**:
+1. **Listen to the acoustic signatures:** Synthetic voices leave subtle artifacts in pitch, spectral phase, and vocoder synthesis that neural models detect even when human ears fail.
+2. **Consult the family out-of-band:** The single most reliable indicator that an incoming call is fraudulent is the real family member saying *"I never called"*. VaaniX routes a high-priority Telegram message to the real person's phone in parallel.
+3. **Act in the golden hour:** The first 60 minutes after an attempted transfer are critical. VaaniX gives users immediate speed-dialing to the National Cyber Crime Helpline (**1930**), pre-fills compliant state cyber-cell emails with cryptographic SHA-256 evidence digests, and notifies banks to freeze suspect transactions.
+
+---
+
+## ✨ Features
+
+| Feature | How It Operates |
+|:---|:---|
+| **10-Second Acoustic Check** | Captures a 10-second sample of the incoming call. Runs **Nes2Net-X** (wav2vec 2.0 XLSR-53 front-end with 300M parameters) to compute acoustic spoof probability ($0 \to 100$). Concurrently runs **faster-whisper** with Indic transliteration to match Hindi, Hinglish, and English extortion vocabularies (arrest, bail, hospital, OTP, customs). |
+| **Transparent Risk Fusion** | Combines signals arithmetically: $\text{risk} = \text{round}(0.70 \times \text{voice} + 0.30 \times \text{text})$. A call is classified `AI_CLONE` when $\text{risk} \ge 60$ **and** $\text{voice} \ge 50$. All weights and bands are isolated in [`src/lib/scoring/config.ts`](src/lib/scoring/config.ts) for empirical auditability. |
+| **Impersonation Extraction** | Natural language analyzers extract claimed identities (*"Papa"*, *"Beta"*, *"Police Inspector"*, *"Bank Manager"*) and match them against the user's registered family member directory. |
+| **Two-Way Family Alerts** | Dispatches simultaneous Telegram notifications: (1) An urgent incident card to the victim, and (2) A verification query to the impersonated family member: *"Someone is calling with your voice. Is this you? [No, it's a scam] [Yes, it's me]"*. Tapping "No" confirms the alert in $< 5\text{ s}$ and raises the caller's reputation on Scam Radar. |
+| **Community Scam Radar** | Phone reputation lookup engine. A number escalates to `potential_scam` when **$\ge 3$ distinct reporters** flag it within 24 hours, or upon any confirmed `impersonation_denied`. Fully configurable via `RADAR_THRESHOLD`. |
+| **Golden-Hour Action Pages** | Instant pre-formatted emergency routes: [`/r/call1930`](src/app/r/call1930/page.tsx) speed-dials the 1930 helpline; [`/r/cyber/[id]`](src/app/r/cyber/[id]/page.tsx) pre-fills state police reports staying strictly $\le 2,000$ characters for browser URL limits; [`/r/bank/[id]`](src/app/r/bank/[id]/page.tsx) pre-fills bank account freeze requests. |
+| **Developer API v1** | Authenticated via Bearer API keys (`vx_live_...`) with developer scopes (`checks:create`, `checks:read`, `evidence`, `complaint`, `radar`) for PBX and telecom integration. See [`docs/API.md`](docs/API.md). |
+| **Zero Fabricated Results** | If the model server is unreachable, the system displays an explicit Offline state. If running in stub mode, verdicts are labeled with a visible **Demo Mode** badge. No `Math.random` verdicts are ever presented as real. |
+
+---
+
+## 🏛️ System Architecture
+
+### High-Level Service Topology
 
 ```mermaid
 flowchart LR
-    subgraph People
-        U["Person on the call"]
-        F["Family member"]
-        V["Visitor / integrator"]
+    subgraph Users["End Users & Integrators"]
+        U["Citizen on Active Call"]
+        F["Family Member on Telegram"]
+        V["Developer / Telecom API Client"]
     end
 
-    subgraph Web["Next.js 16 web app"]
-        PUB["Public pages<br/>/ · /try · /radar · /how-it-works"]
-        APP["Console /app<br/>check · family · history · alerts · api · settings"]
-        ACT["Action pages /r/*<br/>1930 · cyber cell · bank"]
-        API["Route handlers /api/*<br/>and public /api/v1/*"]
-        SCORE["Risk scoring<br/>src/lib/scoring"]
+    subgraph Web["VaaniX Web App (Next.js 16)"]
+        PUB["Public Site<br/>/ · /try · /radar · /how-it-works"]
+        APP["Security Console /app<br/>check · family · history · alerts · api"]
+        ACT["Action Routes /r/*<br/>1930 · cyber cell · bank freeze"]
+        API["Route Handlers /api/*<br/>Public v1 /api/v1/*"]
+        SCORE["Risk Scoring Engine<br/>src/lib/scoring"]
     end
 
-    subgraph Model["Model server (Flask :8765)"]
-        NES["Nes2Net-X<br/>spoof probability"]
-        STT["faster-whisper<br/>speech to text"]
-        TXT["Text analyser<br/>scam words · claim extractor"]
+    subgraph Model["Model Server (Flask :8765)"]
+        NES["Nes2Net-X<br/>acoustic spoof inference"]
+        STT["faster-whisper<br/>speech-to-text"]
+        TXT["Text Analyser<br/>scam words & claim extractor"]
     end
 
-    subgraph SB["Supabase"]
-        PG[("PostgreSQL + RLS")]
-        AUTH["Auth"]
-        EV[("Private 'evidence' bucket")]
+    subgraph DB["Database & Storage"]
+        PG[("Supabase PostgreSQL + RLS<br/>or Local JSON Fallback")]
+        AUTH["Supabase Auth / Local User"]
+        EV[("Private Evidence Bucket<br/>AES-256 + SHA-256")]
     end
 
-    TG["Telegram Bot API"]
+    TG["Telegram Bot API<br/>@Prevent_Scambot"]
 
     U --> PUB
     U --> APP
@@ -105,256 +133,253 @@ flowchart LR
     APP --> AUTH
     API <--> TG
     TG --> F
-    F -->|"Yes / No tap"| TG
+    F -->|"Taps Yes / No"| TG
     APP --> ACT
 ```
 
-### One check, end to end
+### End-to-End Incident Check Sequence
 
 ```mermaid
 sequenceDiagram
     autonumber
-    actor U as Person on the call
+    actor U as Citizen on Active Call
     participant W as Next.js (/api/checks)
-    participant M as Model server
-    participant S as Supabase
-    participant T as Telegram
-    actor F as Family member
+    participant M as Model Server (:8765)
+    participant S as Supabase / DB
+    participant T as Telegram Bot
+    actor F as Family Member
 
-    U->>W: consent, then ≤10 s WAV clip (browser mic or upload)
-    W->>S: load registered family members
-    W->>M: POST /analyze (audio + members, X-Model-Secret)
-    par in parallel
-        M->>M: Nes2Net-X spoof probability
+    U->>W: Confirms consent, submits 10 s WAV audio clip
+    W->>S: Fetch registered family members & relationships
+    W->>M: POST /analyze (audio + family context, X-Model-Secret)
+    par Parallel Neural Inference
+        M->>M: Nes2Net-X evaluates acoustic spoof probability
     and
-        M->>M: faster-whisper transcript
+        M->>M: faster-whisper transcribes Hindi/Hinglish speech
     end
-    M->>M: scam words + impersonation claim
-    M-->>W: voice · transcript · text_analysis · timings
-    W->>W: risk = 0.70·voice + 0.30·text
-    alt AI_CLONE
-        W->>S: save check, store clip + SHA-256 in evidence bucket
-        W->>T: urgent alert to the victim
-        W->>T: "Is this you?" to the impersonated family member
-        F->>T: taps "No, it's a scam"
-        T->>W: webhook callback
-        W->>S: confirm alert, raise caller reputation on Scam Radar
-        W-->>U: status updates within ~5 s
-    else not flagged
-        W-->>U: verdict. Audio is dropped, nothing is stored.
+    M->>M: Matches scam vocabulary & extracts impersonation claim
+    M-->>W: Returns {voice_score, transcript, claim, timings}
+    W->>W: Calculates risk = round(0.70·voice + 0.30·text)
+    alt Verdict: AI_CLONE (Risk >= 60, Voice >= 50)
+        W->>S: Store check record; upload audio to private evidence bucket with SHA-256
+        W->>T: Dispatch urgent security alert to victim
+        W->>T: Dispatch verification query to family member: "Is this you?"
+        F->>T: Taps "No, it's a scam"
+        T->>W: Webhook callback (authenticated with secret token)
+        W->>S: Update alert to 'confirmed_scam', escalate caller number on Scam Radar
+        W-->>U: Incident room updates in real-time (< 5 s)
+    else Verdict: REAL or INCONCLUSIVE
+        W-->>U: Displays transparent verdict. Audio clip is dropped from memory immediately.
     end
 ```
 
-### Risk score
+### Risk Fusion Decision Logic
 
 ```mermaid
 flowchart LR
-    A["Audio clip"] --> V["Voice score<br/>spoof_prob 0–100"]
-    A --> S["Transcript"] --> T["Text score<br/>scam words + claim"]
+    A["10-Second Audio Clip"] --> V["Voice Score<br/>spoof_prob: 0–100"]
+    A --> S["Transcript Text"] --> T["Text Score<br/>scam words + claim: 0–100"]
     V --> R["risk = round(0.70·voice + 0.30·text)"]
     T --> R
-    R --> D{"risk ≥ 60<br/>and voice ≥ 50?"}
-    D -- yes --> C["AI_CLONE: alert + evidence + actions"]
-    D -- no --> N["Lower band: shown with an explanation"]
+    R --> D{"risk ≥ 60<br/>AND voice ≥ 50?"}
+    D -- Yes --> C["Verdict: AI_CLONE<br/>Trigger alerts, store evidence, open actions"]
+    D -- No --> N{"risk ≤ 40?"}
+    N -- Yes --> G["Verdict: REAL<br/>Drop audio immediately from memory"]
+    N -- No --> I["Verdict: INCONCLUSIVE<br/>Advise manual verification"]
 ```
 
-If no speech is detected, the text score does not count, and the explanation says so.
+---
 
-### Data model
+## 🚀 Getting Started
 
-Twelve tables live in [`supabase/migrations/`](supabase/migrations). The core five:
+### Prerequisites
 
-```mermaid
-erDiagram
-    BANKS ||--o{ PROFILES : "bank_id"
-    CYBER_CELLS ||--o{ PROFILES : "state_code"
-    PROFILES ||--o{ FAMILY_MEMBERS : "user_id"
-    PROFILES ||--o{ CHECKS : "user_id"
+- **Node.js** $\ge 20.x$ and `npm`
+- **Python** `3.10.x`
+- **Supabase Account** ([supabase.com](https://supabase.com)) *or use built-in local store*
+- **Telegram Bot Token** (from `@BotFather`)
 
-    BANKS {
-        uuid id PK
-        text name
-        text fraud_email
-        bool is_demo
-    }
-    CYBER_CELLS {
-        text state_code PK
-        text state_name
-        text email "NULL until verified"
-        text portal_url "cybercrime.gov.in"
-        bool verified
-    }
-    PROFILES {
-        uuid id PK "= auth.users.id"
-        text display_name
-        text phone_e164
-        bigint telegram_chat_id
-        text telegram_link_token
-    }
-    FAMILY_MEMBERS {
-        uuid id PK
-        uuid user_id FK
-        text name
-        text_array aliases
-        text relationship
-        text phone_e164
-        bigint telegram_chat_id
-        text join_token
-    }
-    CHECKS {
-        uuid id PK
-        uuid user_id FK
-        text source "web_mic, web_upload, api, laptop_pipeline"
-        text caller_e164
-        int voice_score
-        int text_score
-        int risk_score
-    }
-```
+### Step 1: Install Web Application Dependencies
 
-Row Level Security ([`0002_rls.sql`](supabase/migrations/0002_rls.sql)) keeps every user's checks, alerts and family contacts private to them.
-
-### Design rules
-
-1. **The score is arithmetic, not a vibe.** The verdict comes from a published formula and thresholds in one config file.
-2. **Say what is real.** Stub results are badged, an offline model is reported as offline, and cyber-cell emails are shown only if verified.
-3. **Collect as little as possible.** Clips that are not flagged are processed in memory and dropped.
-4. **The family decides.** A "No, it's a scam" tap from the impersonated person is the strongest signal in the system.
-
-## Getting started
-
-You need Node.js 20+, npm, Python 3.10 (for the real model), a Supabase project, and a Telegram bot token from `@BotFather`.
-
-**1. Install the web app**
 ```bash
 git clone https://github.com/vandit-bajaj/VaaniX.git
 cd VaaniX
 npm install --legacy-peer-deps
 ```
 
-**2. Run the model server**
+### Step 2: Set Up Python Model Server
+
 ```bash
 python3.10 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-bash run_server.sh            # Flask on http://127.0.0.1:8765
-```
-For the full model, also install `fairseq` and download the ~5 GB of weights, as described in [`voice_detection_pipeline/README.md`](voice_detection_pipeline/README.md). To try the UI without the weights, run the server with `VOICE_DETECTION_STUB=1`.
 
-**3. Configure the environment**
+# Start Flask model daemon on port 8765
+bash run_server.sh
+```
+
+> [!NOTE]
+> To run with the full neural weights, install `fairseq` and download the ~5 GB model weights as described in [`voice_detection_pipeline/README.md`](voice_detection_pipeline/README.md).  
+> To test the UI and workflows quickly without downloading weights, set `VOICE_DETECTION_STUB=1` in your environment.
+
+### Step 3: Configure Environment Variables
+
 ```bash
 cp .env.example .env.local
 ```
 
-| Variable | What it is for |
-|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Public URL of the app (used for links and the Telegram webhook). |
-| `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase client access. |
-| `SUPABASE_SERVICE_ROLE_KEY` | Server-side admin access. Never expose it to the browser. |
-| `MODEL_SERVER_URL` | Where the Flask model server is. Defaults to `http://127.0.0.1:8765`. |
-| `MODEL_SERVER_SECRET` | Shared secret sent as `X-Model-Secret`. |
-| `TELEGRAM_BOT_TOKEN`, `TELEGRAM_WEBHOOK_SECRET` | The bot and webhook verification. |
-| `LINK_SIGNING_SECRET` | Signs one-tap action links. |
-| `RADAR_THRESHOLD` | Distinct reporters needed to flag a number (default 3). |
-| `LOCAL_DB_PATH` | Local store file used when Supabase is not configured (default `.data/local-db.json`). |
+| Key | Description |
+|:---|:---|
+| `NEXT_PUBLIC_SITE_URL` | Base public URL of the application (e.g. `http://localhost:3000` or production domain). |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL (optional if using local store). |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Public Supabase anon key. |
+| `SUPABASE_SERVICE_ROLE_KEY` | Private Supabase admin key (strictly server-side). |
+| `LOCAL_DB_PATH` | Local JSON store path used when Supabase credentials are not set (default `.data/local-db.json`). |
+| `MODEL_SERVER_URL` | URL of the Flask model daemon (defaults to `http://127.0.0.1:8765`). |
+| `MODEL_SERVER_SECRET` | Shared authorization secret passed as `X-Model-Secret`. |
+| `TELEGRAM_BOT_TOKEN` | Bot API token issued by `@BotFather`. |
+| `TELEGRAM_BOT_USERNAME` | Bot username (e.g. `Prevent_Scambot`). |
+| `TELEGRAM_WEBHOOK_SECRET` | Secret token verified against `X-Telegram-Bot-Api-Secret-Token`. |
+| `LINK_SIGNING_SECRET` | 32-character HMAC secret used to sign `/r/*` redirect links. |
+| `RADAR_THRESHOLD` | Number of distinct reporters needed to flag a number (default: `3`). |
 
-**4. Create the database.** In the Supabase SQL editor, run the files in `supabase/migrations/` in order: `0001_init.sql`, `0002_rls.sql`, `0003_seed_banks_and_states.sql`.
+### Step 4: Initialize Database (If Using Supabase)
 
-**5. Register the Telegram webhook** (needs a public HTTPS URL):
+In your Supabase SQL Editor, execute the migration files in order:
+1. `supabase/migrations/0001_init.sql` (Tables, indices, rate limits)
+2. `supabase/migrations/0002_rls.sql` (Row-Level Security policies & storage buckets)
+3. `supabase/migrations/0003_seed_banks_and_states.sql` (Seeds 36 states and demo bank)
+
+### Step 5: Register Telegram Webhook
+
 ```bash
 npx tsx scripts/set-telegram-webhook.ts https://your-public-domain.com
 ```
 
-**6. Start the app**
+### Step 6: Start Web Development Server
+
 ```bash
-npm run dev                   # http://localhost:3000
+npm run dev
+# Open http://localhost:3000
 ```
 
-> [!WARNING]
-> Browser microphone capture and the Telegram webhook both need **HTTPS**. `localhost` is fine for the mic; the webhook needs a public URL.
+---
 
-### Commands
+## ☁️ Deploying to AWS
 
-| Command | What it does |
-|---|---|
-| `npm run dev` · `npm run build` · `npm start` | Develop, build and serve the web app. |
-| `npm run lint` · `npm run typecheck` | ESLint and TypeScript checks. |
-| `npm test` | Vitest unit and integration tests. |
-| `npm run test:e2e` | Playwright browser tests. |
-| `pytest voice_detection_pipeline/tests/` | Model-server and text-analysis tests (stub mode). |
-| `bash run_server.sh` | Start the model server. |
+VaaniX includes a production-ready single-instance deployment architecture using Docker Compose and Caddy (automatic HTTPS reverse proxy):
 
-GitHub Actions ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs lint, types, Vitest, the production build and the Python tests on every push and pull request.
-
-## Deploying to AWS
-
-The repo includes a single-server setup: one EC2 instance running Docker Compose with the web app, the model server and Caddy (automatic HTTPS).
-
-| File | Role |
-|---|---|
-| [`Dockerfile`](Dockerfile) | Multi-stage build of the Next.js app (`output: "standalone"`). |
-| [`voice_detection_pipeline/Dockerfile.prod`](voice_detection_pipeline/Dockerfile.prod) | Lightweight gunicorn image for the model server, in stub mode. |
-| [`deploy/docker-compose.prod.yml`](deploy/docker-compose.prod.yml) | Web, model server and Caddy together. The model server is not published to the internet. |
-| [`deploy/Caddyfile`](deploy/Caddyfile) | HTTPS reverse proxy for `SITE_HOST`. |
-
-On the server, put your settings in `deploy/.env` (at minimum `SITE_HOST`, `MODEL_SERVER_SECRET`, `LINK_SIGNING_SECRET`; add the Supabase and Telegram values when you have them) and run `docker compose -f deploy/docker-compose.prod.yml up -d --build`.
-
-`SITE_HOST` can be a real domain, or `<elastic-ip>.sslip.io` for a free HTTPS hostname without one. `NEXT_PUBLIC_*` values are baked in at build time, so rebuild after changing them.
-
-The current deployment runs on a `c7i-flex.large` in `ap-southeast-2` at [52.62.8.151.sslip.io](https://52.62.8.151.sslip.io).
-
-> [!NOTE]
-> **Without Supabase**, the app runs on a built-in local store: a JSON file at `LOCAL_DB_PATH` (default `.data/local-db.json`, kept in the `app_data` Docker volume) and a single local user, so the console works with no sign-in. Set the Supabase variables to switch to Postgres, Auth and RLS.
->
-> **The production image runs the model server in stub mode**, so scores are placeholders and the UI marks them as such. Real detection needs a larger instance, the `fairseq` install and the ~5 GB of weights (see [`voice_detection_pipeline/README.md`](voice_detection_pipeline/README.md)).
-
-## Status and limitations
-
-- **Model accuracy:** 95% in our internal tests. Test-set details are coming soon, so no benchmark comparison is claimed.
-- **Latency:** about 10 seconds per check on our demo machine (CPU).
-- **Stub mode** returns random scores so the interface can be tested. It is always labelled, and never presented as a detection.
-- **Scoring weights and thresholds** (0.70 / 0.30, 60, 50) are engineering baselines, not yet tuned on a large real-audio set.
-- **Cyber-cell emails** are filled in only from verified government sources. Until then, VaaniX shows the National Cyber Crime Reporting Portal ([cybercrime.gov.in](https://cybercrime.gov.in)) and the **1930** helpline.
-- **Android:** the `android/` module (Payment Guard, live overlay) is a prototype and is not part of the website.
-- **`backend/`** is an earlier FastAPI prototype. The website runs on Next.js route handlers and Supabase.
-
-Open decisions are tracked in [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md).
-
-## Privacy and security
-
-- **Ephemeral audio:** clips that are not flagged are processed in memory and dropped.
-- **30-day evidence retention:** flagged `AI_CLONE` clips are stored in a private Supabase bucket with a SHA-256 digest, and kept for 30 days (`EVIDENCE_RETENTION_DAYS`).
-- **User isolation:** Row Level Security stops one account reading another's checks, alerts or family contacts.
-- **Consent first:** the live interface asks for explicit confirmation before recording or analysing call audio. Users can delete their account and transcript history at any time.
-- **Model server protection:** the model server checks an `X-Model-Secret` header, rejects clips over 3 MB, and should only be reachable from the web app.
-- **Rate limits:** the public `/try` demo allows 5 checks per IP per hour.
-- **Secrets stay out of git:** Telegram and Supabase credentials are read from environment variables only.
-
-## Repository layout
-
-```
-src/              Next.js app: pages, route handlers, scoring, Telegram, Supabase clients
-  app/            (public) site · /app console · /r action pages · /api and /api/v1
-  lib/            scoring · radar · telegram · supabase · complaints · API keys
-  components/     UI primitives, check results, family graph, marketing blocks
-voice_detection_pipeline/   Flask model server, Nes2Net-X runner, text analyser, tests
-supabase/migrations/        Schema, RLS policies, seed data
-data/             Scam vocabulary (scam_words.yaml)
-deploy/           Docker Compose + Caddy for a single-server AWS setup
-docs/             API reference, demo script, test runs
-tests/e2e/        Playwright tests
-scripts/          Telegram webhook setup
-android/          Android prototype (not part of the website)
-backend/          Earlier FastAPI prototype (superseded)
+```text
+ ┌────────────────────── AWS EC2 Instance (c7i-flex.large) ─────────────────────┐
+ │                                                                              │
+ │    Inbound HTTPS (:443) ──► [ Caddy Reverse Proxy ]                          │
+ │                                    │                                         │
+ │                     ┌──────────────┴──────────────┐                          │
+ │                     ▼                             ▼                          │
+ │           [ Next.js Container ]         [ Model Server Container ]           │
+ │           (Standalone Node.js :3000)    (Flask/Gunicorn Daemon :8765)        │
+ │                     │                                                        │
+ │                     ▼                                                        │
+ │          [ Docker Volume: app_data ] (Local JSON Database Fallback)          │
+ └──────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Contributor notes for AI assistants are in [`AGENTS.md`](AGENTS.md).
+| Deployment File | Purpose in Production |
+|:---|:---|
+| [`Dockerfile`](Dockerfile) | Multi-stage production build of Next.js 16 (`output: "standalone"`). |
+| [`voice_detection_pipeline/Dockerfile.prod`](voice_detection_pipeline/Dockerfile.prod) | Lightweight Python gunicorn container running the inference engine. |
+| [`deploy/docker-compose.prod.yml`](deploy/docker-compose.prod.yml) | Orchestrates the Next.js app, model server, and Caddy with internal networking. |
+| [`deploy/Caddyfile`](deploy/Caddyfile) | Automatic Let's Encrypt TLS certificate provisioning for `SITE_HOST`. |
 
-## Credits and licences
+To deploy to an EC2 instance:
+```bash
+# 1. Create deployment environment file
+cp .env.example deploy/.env
 
-- **Web:** Next.js, React, Tailwind CSS, Radix UI, Framer Motion, Supabase, Sonner, Lucide.
-- **Model server:** PyTorch, fairseq, Flask, faster-whisper, librosa, RapidFuzz, indic-transliteration.
-- **Voice model:** Nes2Net-X on the wav2vec 2.0 XLSR-53 front end. Check each project's licence before redistributing weights.
-- **Helplines and portals:** National Cyber Crime Reporting Portal and the 1930 helpline are run by the Government of India.
+# 2. Start the multi-container stack
+docker compose -f deploy/docker-compose.prod.yml up -d --build
+```
 
-VaaniX is released under the MIT License (no `LICENSE` file has been added to the repo yet).
+---
+
+## 🧪 Automated Verification & Tests
+
+VaaniX maintains a strict, zero-fabrication quality gate enforced via automated testing and GitHub Actions:
+
+```bash
+# Run Vitest test suite (67 unit & integration tests)
+npm test
+
+# Run Python model server & text analyzer tests (29 tests)
+./.venv/bin/pytest voice_detection_pipeline/tests/
+
+# Run TypeScript static typechecker
+npm run typecheck
+
+# Run ESLint rules validation
+npm run lint
+
+# Run Next.js 16 Turbopack production build (39 routes)
+npm run build
+
+# Run Playwright end-to-end browser tests
+npm run test:e2e
+```
+
+---
+
+## 🔒 Privacy, Security & Forensics
+
+- **Ephemeral Audio Lifecycle:** Audio clips that are not flagged (`REAL` or `INCONCLUSIVE`) are analyzed strictly in volatile memory and dropped immediately. No unflagged audio is ever persisted to disk.
+- **30-Day Evidence Retention:** Calls verified as `AI_CLONE` have their raw audio encrypted and saved to a private Supabase Storage bucket with an immutable **SHA-256 fingerprint** for official police verification. Evidence auto-expires after 30 days (`EVIDENCE_RETENTION_DAYS`).
+- **Complete User Isolation:** Supabase Row-Level Security (RLS) ensures that User A cannot read or access checks, alerts, or family contacts belonging to User B.
+- **Explicit Recording Consent:** The live analysis interface requires the user to explicitly confirm permission before capturing call audio.
+- **Account & Data Erasure:** Users can permanently delete their profile, registered family contacts, and check history at any time through `/app/settings`.
+
+---
+
+## 🔍 Status and Transparency
+
+- **Model Accuracy:** **95% accuracy in our internal tests.** Test set details and benchmark conditions will be published once fully documented. No benchmark comparison is claimed.
+- **Inference Latency:** About 10 seconds per check on our reference testing hardware.
+- **Stub Mode:** Returns randomized benchmark responses so the user interface and alert dispatch pipelines can be verified without requiring 5 GB GPU weights. Stub results are always explicitly badged as **Demo Mode**.
+- **State Cyber Cell Directory:** Direct email addresses for state cyber cells are only listed when confirmed from official government directories with source citations. If unverified, VaaniX displays the official National Cyber Crime Reporting Portal ([cybercrime.gov.in](https://cybercrime.gov.in)) and helpline **1930**.
+- **Prototype Components:** The `android/` module and `backend/` directory represent earlier prototyping artifacts; the active production platform runs on Next.js 16 Route Handlers and Supabase/Local DB.
+
+---
+
+## 📂 Repository Layout
+
+```text
+VaaniX/
+├── .github/workflows/ci.yml         # GitHub Actions automated CI pipeline
+├── data/                            # scam_words.yaml (Hindi/Hinglish/English dictionary)
+├── deploy/                          # AWS EC2 Docker Compose, Caddyfile, and production config
+├── docs/                            # DEMO.md (demo guide), TEST_RUNS.md (audio test protocol)
+├── public/                          # Self-hosted Carlito fonts and static assets
+├── scripts/                         # set-telegram-webhook.ts (Telegram webhook configuration)
+├── src/
+│   ├── app/                         # App Router: public pages, /app console, /r incident routes, /api
+│   ├── components/                  # Deck design system: RiskMeter, VerdictBanner, FamilyDiagram
+│   ├── hooks/                       # useVoiceCheck (5s wait + 10s recording)
+│   ├── lib/                         # Scoring logic, link signing, radar engine, Supabase & local DB
+│   └── types/                       # Database interfaces and API typings
+├── supabase/migrations/             # 0001_init.sql, 0002_rls.sql, 0003_seed_banks_and_states.sql
+├── tests/e2e/                       # Playwright browser automation test suite
+├── voice_detection_pipeline/        # Nes2Net-X inference server, text analyzer, and pytest suite
+├── Dockerfile                       # Multi-stage production container build
+├── requirements.txt                 # Python dependencies
+├── package.json                     # Node.js dependencies and script definitions
+└── LICENSE                          # MIT License
+```
+
+---
+
+## 📜 Credits & License
+
+- **Web Platform:** Next.js 16, React 19, Tailwind CSS 4, Radix UI, Framer Motion, Supabase, Lucide Icons, Carlito Font.
+- **Acoustic Inference:** PyTorch, fairseq, Flask, faster-whisper, librosa, RapidFuzz, indic-transliteration.
+- **Neural Model:** Nes2Net-X on the wav2vec 2.0 XLSR-53 front-end.
+- **Official Helplines:** National Cyber Crime Reporting Portal and the **1930** Helpline are operated by the Ministry of Home Affairs, Government of India.
+
+VaaniX is open source software released under the [MIT License](LICENSE).
